@@ -1,0 +1,18 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class CalculIVA {
+
+    public static void main(String[] args) {
+        System.out.println("introduce precio a calcular con iva");
+
+        Scanner input = new Scanner(System.in);
+        int preu = input.nextInt();
+        System.out.println(preuAmbIVA(preu));
+    }
+
+    static int preuAmbIVA(int precio){
+        return precio + (precio % 21);
+    }
+}
